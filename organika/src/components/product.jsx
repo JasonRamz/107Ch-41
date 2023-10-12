@@ -6,16 +6,19 @@ function Product(props){
         console.log("Hello products");
     },[]);
 
+    function onQuantityChange(qty){
+        console.log("new quantity" + qty);
+    }
     return(
         <div className="product">
             <img src={"/img/" + props.data.image} alt="placeholder"/>
             <h5>{props.data.title}</h5>
             <div className="prices">
-                <label>${props.data.price}</label>
-                <label>Total</label>
+                <label>Price:${props.data.price}</label>
+                <label>Total:$</label>
                 {/* include the displayflex*/}
             </div>
-            <QuantityPicker/>
+            <QuantityPicker onChange={onQuantityChange}/>
 
             {/* render this in the catalog 5 times */}
         </div>

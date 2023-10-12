@@ -20,4 +20,7 @@ function App() {
 
 export default App;
 
-// SPA single page application
+//React-> SPA single page application -> components
+//state Variables is global and immutable 
+// const[ name,setName*is a functions*]
+//useEffect -> init function will tell us what should be executed first then we specify what function to load faster

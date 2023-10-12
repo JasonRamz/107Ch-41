@@ -1,0 +1,19 @@
+.catalog .btn-filter{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    white-space: nowrap;
+    width: 100%;
+}
