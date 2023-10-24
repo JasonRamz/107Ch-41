@@ -56,7 +56,7 @@ function filter(category){
             <br />
             <button onClick={clearFilters} className="btn btn-sm btn-warning btn-filter">Clear</button>
             <br />
-            {productsToDisplay.map(arrowProducts => <Product key={arrowProducts._id} data={arrowProducts} />)}
+            {productsToDisplay.map(item => <Product key={item._id} data={item} />)}
         </div>
     );
 }

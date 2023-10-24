@@ -1,0 +1,12 @@
+.admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.admin h1{
+    font-size: 50px;
+    color: #9bffc6;
+    padding-top: 100px;
+}

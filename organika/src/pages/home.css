@@ -1,0 +1,19 @@
+
+.home {
+    min-height: 500px;
+    background-color: rgb(110, 115, 115);
+}
+
+.home h1{
+    text-align: center;
+    font-size: 50px;
+    color: #9bffc6;
+    padding-top: 100px;
+}
+
+.home p{
+    text-align: center;
+    font-size: 30px;
+    color: #21eb72;
+    padding-top: 50px;
+}
