@@ -3,9 +3,11 @@ import "./footer.css";
 function Footer(){
 
     return(
-        <div className="Footer">
-            <label>You are way up there^^</label>
-        </div>
+        <footer className="Footer">
+            <div className="footer-info">
+                <p>&copy; 2023 La Bodega . All rights reserved.</p>
+            </div>
+        </footer>
     );
 
 }
