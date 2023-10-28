@@ -1,8 +1,17 @@
 .about{
-    background-color: #ccc;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
 }
 
 .about h2{
-    color: blue;
+    color: #000;
     text-align: center;
+}
+.about p{
+    color: #000;
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
 }

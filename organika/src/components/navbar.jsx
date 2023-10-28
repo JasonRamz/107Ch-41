@@ -1,9 +1,13 @@
 import "./navbar.css";
-
-
 import {Link} from 'react-router-dom';
+import DataContext from '../store/dataContext';
+import {useContext} from 'react';
+
 // Navbar is a component
 function Navbar(){
+    const user = useContext(DataContext).user;
+    const cart = useContext(DataContext).cart;
+
     return(
         <div className="NavBar">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -38,6 +42,8 @@ function Navbar(){
           <Link className="nav-link" aria-current="page" to="/catalog">
             Catalog
           </Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" aria-current="page" to="/admin">
             Admin
           </Link>
@@ -50,9 +56,14 @@ function Navbar(){
           placeholder="Search"
           aria-label="Search"
         />
-        <button className="btn btn-outline-success" type="submit">
-          Search
-        </button>
+        <div>
+        <i class="fa-duotone fa-user"></i>
+          {user.name}
+        </div>
+        <Link to="/cart" className="btn btn-outline-primary">
+        <i class="fa-duotone fa-cart-plus"></i>
+          {cart.length} Cart
+        </Link>
       </form>
     </div>
   </div>
