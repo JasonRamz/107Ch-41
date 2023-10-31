@@ -14,9 +14,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
 import {BrowserRouter, Routes, Route}from 'react-router-dom';
+import GlobalProvider from './store/globalProvider';
 
 function App() {
   return (
+    <GlobalProvider>
     <BrowserRouter>
       <div className="App">
         <Navbar/>
@@ -33,6 +35,7 @@ function App() {
         <Footer/>
       </div>
     </BrowserRouter>
+    </GlobalProvider>
   );
 }
 

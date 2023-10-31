@@ -1,8 +1,9 @@
 import "./home.css";
+
 function Home(){
     return(
-        <div className="home">
-            <h1>Bodega</h1>
+        <div className="home page">
+            <h1 className="title">Bodega</h1>
             <p>La mejor bodega de la ciudad</p>
             <p>Horario de apertura: Lunes 9 AM - 7 PM
                 Martes 9 AM - 7 PM

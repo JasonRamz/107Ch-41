@@ -5,7 +5,7 @@ import DataContext from "../store/dataContext";
 
 function Product(props){
     const[quantity,setQuantity] = useState(1);//useState is a hook in react
-    const addToCart = useContext(DataContext).addToCart();
+    const addToCart = useContext(DataContext).addToCart;
     useEffect(function(){
         console.log("Hello products");
     },[]);
@@ -16,11 +16,10 @@ function Product(props){
     function handleAdd(){
         let prodCart = {...props.data}
         prodCart.quantity = quantity;
-        addToCart();
+        addToCart(prodCart);
     }
     function getTotal(){
         const total = props.data.price * quantity
-
         return total.toFixed(2);
     }
 
@@ -30,7 +29,7 @@ function Product(props){
             <h5>{props.data.title}</h5>
             <div className="prices">
                 <label>Price: ${props.data.price.toFixed(2)}</label>
-                <label>Total: ${props.data.price * quantity} </label>
+                <label>Total$ {getTotal()} </label>
                 {/* include the displayflex*/}
             </div>
             <QuantityPicker onChange={onQuantityChange}/>

@@ -1,17 +1,4 @@
 
-.home {
-    min-height: 850px;
-    background-image: url("https://th.bing.com/th/id/OIG.LPghv0HBXBVN.Y4N9Rgw?pid=ImgGn");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 .home h1 {
     font-size: 50px;
     color: #007acc; 

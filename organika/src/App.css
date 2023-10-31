@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.page {
+  min-height: calc(100vh - 110px);
+}
+
+.page .title{
+  color: #376c83;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
