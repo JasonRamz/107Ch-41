@@ -39,12 +39,18 @@ function Cart() {
                     <h3>${getTotal()}</h3>
                     <hr />
                     <input type="text" placeholder="Coupon code" />
+                    <button type="button"  className="btn btn-dark">Apply</button>
                     <hr />
-                    <div className="input-group">
-                        <input type="text" placeholder="Gift card" />
-                        <button className="btn btn-dark">Apply</button>
-                    </div>
-                    <button className="btn btn-dark">Pay</button>
+                    <input type="text" placeholder="Gift card" />
+                    <button  type="button"  className="btn btn-dark">Apply</button>
+                    <hr />
+                    <label>Subtotal</label>
+                    <label>:${getTotal()}</label>
+                    <br />
+                    <label>Shipping</label>
+                    <label>Free</label>
+                    <br />
+                    <button type="button"  className="btn btn-dark">Pay</button>
                 </aside>
             </div>
         </div>

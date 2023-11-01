@@ -12,8 +12,6 @@ const[productsToDisplay, setProductsToDisplay] = useState([]);
 //let array = [];
 //let variables = 1;
 useEffect(function(){
-
-    console.log("catalog component is loaded");
     loadCatalog();//this is very similar to init function
 },[]);
 
@@ -33,7 +31,6 @@ function clearFilters() {
     setProductsToDisplay(products);
 }
 function filter(category){
-        console.log(category);
         //lets create the filters logic 
         //first we need a variable to store the catergory
         let list = [];
@@ -45,7 +42,6 @@ function filter(category){
             }
             //console.log(prod);
         }
-        console.log(list);
         setProductsToDisplay(list);
 }
     return (

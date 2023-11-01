@@ -1,0 +1,22 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    height: 90vh;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.profile-card:hover{
+    box-shadow: 0 5px 20px #3f51b5;
+    cursor: pointer;
+}

@@ -5,7 +5,6 @@ import {useState} from "react";
 function QuantityPicker(props){
     const [quantity, setQuantity] = useState(1);
     function increase(){
-        console.log("increase quantity")
         // create the logic to increment the quantity each time it clicks
         // also cor the decrease quantity
         let val = quantity + 1;
@@ -14,7 +13,6 @@ function QuantityPicker(props){
         
         };
     function decrease(){
-        console.log("decrease quantity")
         if(quantity===1){return};
         let val = quantity - 1;
         setQuantity(val);

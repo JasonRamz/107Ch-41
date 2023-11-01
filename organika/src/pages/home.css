@@ -1,12 +1,23 @@
 
 .home h1 {
     font-size: 50px;
-    color: #007acc; 
-
+    color: #007acc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .home p {
-    font-size: 24px; 
-    color: #ffffff; 
-    text-align: rowspan;
+    font-size: 20px;
+    color: #007acc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+}
+
+.home-poster {
+    background-image: url('/public/img/La Bodega.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
 }

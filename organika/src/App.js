@@ -7,6 +7,7 @@ import About from './pages/about';
 import Home from './pages/home';
 import Admin from './pages/admin';
 import Cart from './pages/cart';
+import Profile from './pages/Profile';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -15,6 +16,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import {BrowserRouter, Routes, Route}from 'react-router-dom';
 import GlobalProvider from './store/globalProvider';
+
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
           <Route path="/about" element={<About/>}></Route>
           <Route path="/admin" element={<Admin/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/Profile" element={<Profile/>}></Route>
         </Routes>
           
         <Footer/>

@@ -61,8 +61,10 @@ function Navbar(){
         </ul>
       <form className="d-flex" role="search">
         <div>
-          <button type="button" className="btn btn-outline-light ms-2"><i className="fa-solid fa-user"></i>
+          <Link className="nav-link" aria-current="page" to="/Profile">
+          <button type="button" className="btn btn-outline-primary ms-2"><i className="fa-solid fa-user"></i>
           {user.name}</button>
+          </Link>
         </div>
         <div>
           <Link to="/cart" className="btn btn-outline-primary">

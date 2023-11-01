@@ -1,17 +1,28 @@
-.about{
+.about {
+    text-align: center;
+    max-width: 900px;
     margin: 0 auto;
-    width: 80%;
-    padding: 20px;
-    background-color: #fff;
+    padding: 50px 20px;
+    min-height: calc(100vh - 110px);
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
 }
 
-.about h2{
-    color: #000;
-    text-align: center;
+.about h2 {
+    font-size: 36px;
+    color: #0095ff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
-.about p{
-    color: #000;
-    text-align: justify;
+
+p {
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+}
+.about:hover{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }

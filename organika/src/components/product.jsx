@@ -7,7 +7,6 @@ function Product(props){
     const[quantity,setQuantity] = useState(1);//useState is a hook in react
     const addToCart = useContext(DataContext).addToCart;
     useEffect(function(){
-        console.log("Hello products");
     },[]);
 
     function onQuantityChange(qty){
