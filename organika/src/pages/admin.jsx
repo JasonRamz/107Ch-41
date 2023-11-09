@@ -1,6 +1,8 @@
+import DataService from "../services/dataservice";
 import "./admin.css";
-import { useState } from "react";
+import { useEffect,useState } from "react";
 function Admin() {
+
     const [allProducts, setAllProducts] = useState([]);
     const [product, setProduct] = useState({
         title: "",
@@ -9,41 +11,75 @@ function Admin() {
         image: "",
         price: 0,
     });
+
     const[allCoupons, setAllCoupons]=useState([]);
     const [coupon, setCoupon] = useState({
         code: "",
         discount: 0,
     });
+
+    useEffect(function () {
+        loadProducts();
+        loadCoupons();
+    },[]);
+
+
+
+    async function loadProducts() {
+        const service = new DataService();
+        let productsResponse = await service.getProducts();
+        setAllProducts(productsResponse);
+    }
+
+
+    async function loadCoupons() {
+        const service = new DataService();
+        let couponsResponse = await service.getCoupons();
+        setAllCoupons(couponsResponse);
+    }
+
+
+    function handleProductChange(e) {
+        let name = e.target.name;
+        let copy = { ...product };
+        copy[name] = e.target.value;
+        setProduct(copy);
+    }
+    async function saveProduct() {
+        let fixedProduct = { ...product };
+        fixedProduct.price = parseFloat(product.price);
+        console.log(fixedProduct);
+
+        const service = new DataService();
+        let savedProduct = await service.saveProduct(fixedProduct);
+
+        let copy = [...allProducts];
+        copy.push(savedProduct);
+        setAllProducts(copy);
+    }
+
+
     function handleCouponChange(x) {
         let couponName = x.target.name;
         let copy = { ...coupon };
         copy[couponName] = x.target.value;
         setCoupon(copy);
     }
-    function saveCoupon() {
-        console.log(coupon);
+
+
+    async function saveCoupon() {
+        let fixedCoupon = { ...coupon };
+        fixedCoupon.discount = Number(coupon.discount);
+
+        const service = new DataService();
+        let savedCoupon = await service.saveCoupon(fixedCoupon);
 
         let copy = [...allCoupons];
-        copy.push(coupon);
+        copy.push(savedCoupon);
         setAllCoupons(copy);
     }
 
-    function handleProductChange(e) {
-        let name = e.target.name;
-        //create a copy
-        //modify the copy
-        //set the copy back
-        let copy = { ...product };
-        copy[name] = e.target.value;
-        setProduct(copy);
-    }
-    function saveProduct() {
-        console.log(product);
 
-        let copy = [...allProducts];
-        copy.push(product);
-        setAllProducts(copy);
-    }
     return (
         <div className="admin">
             <section className="add-item-section">

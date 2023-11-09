@@ -43,16 +43,19 @@ function Navbar(){
             Home
           </Link>
         </li>
+        <br />
         <li className="nav-item">
           <Link className="nav-link" aria-current="page" to="/about">
             About
           </Link>
         </li>
+        <br />
         <li className="nav-item">
           <Link className="nav-link" aria-current="page" to="/catalog">
             Catalog
           </Link>
         </li>
+        <br />
         <li className="nav-item">
           <Link className="nav-link" aria-current="page" to="/admin">
             Admin
@@ -66,6 +69,7 @@ function Navbar(){
           {user.name}</button>
           </Link>
         </div>
+        <br />
         <div>
           <Link to="/cart" className="btn btn-outline-primary">
           <i className="fa-solid fa-cart-plus"></i>

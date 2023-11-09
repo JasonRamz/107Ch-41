@@ -9,30 +9,25 @@ function Catalog(){
 const[products, setProducts] = useState([]);
 const[categories, setCategories] = useState([]);
 const[productsToDisplay, setProductsToDisplay] = useState([]);
-//let array = [];
-//let variables = 1;
+
 useEffect(function(){
-    loadCatalog();//this is very similar to init function
+    loadCatalog();
 },[]);
 
-function loadCatalog(){
-    //get the products that i have in the catalog (dataservice)
+async function loadCatalog(){
     let service = new DataService();
-    let prods = service.getProducts();
+    let prods = await service.getProducts();
     setProducts(prods);
     setProductsToDisplay(prods);
-    //here i want to create the values for the chategories stateVariable
+    
     let cats = ["Footwear", "Headwear", "Clothing"];
     setCategories(cats);
     
 }
 function clearFilters() {
-    //something to do here
     setProductsToDisplay(products);
 }
 function filter(category){
-        //lets create the filters logic 
-        //first we need a variable to store the catergory
         let list = [];
         //find the product that matches the category and add them to the list
         for(let i = 0; i < products.length; i++){
